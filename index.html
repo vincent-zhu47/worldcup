@@ -1,0 +1,278 @@
+<!-- The originial version of this template was made by Johnathan Soma and then messed with and customized by Aaron Reiss -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+		<script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollama/3.0.4/scrollama.min.js"></script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.3.0/d3.min.js"></script>
+  </head>
+
+  <body>
+    <section id="intro">
+      <iframe
+        id="intro-video"
+        src="https://www.youtube.com/embed/Geb-azi-0TE?autoplay=1&mute=1&loop=1&playlist=Geb-azi-0TE&controls=0&modestbranding=1&rel=0&iv_load_policy=3&disablekb=1&playsinline=1"
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
+      </iframe>
+      <h1 id="title">America's World Cup: <br><span class="title-sub">A Lesson in Human Movement </span><br><span class="title-sub">and Public Transportation</span></h1>
+      <div id="subtitle">
+        <h2>Vincent Zhu</h2>
+        <h2>April 2026</h2>
+      </div>
+    </section>
+
+    <section class="text-section" id="text-section1">
+      <div class="section-header">
+        <h2>I. THE WORLD CUP</h2>
+      </div>
+      <div class="section-body">
+        <p class="para">The World Cup is largely regarded as the most prestigious football competition, and perhaps sporting competition, in the world. Held only every 4 years, each event draws millions of spectators to the host country to watch and support their nations. The 2026 World Cup is held between 3 countries &mdash; the United States, Canada, and Mexico.</p>
+        <p class="para">These 3 host nations will split the 16 World Cup stadiums amongst themselves, with 2 in Canada, 3 in Mexico, and 11 in the United States. The locations of these stadiums are shown below.</p>
+      </div>
+      <div class="stadiums-container">
+        <ol class="stadiums-list">
+          <li>BC Place (Vancouver)</li>
+          <li>Lumen Field (Seattle)</li>
+          <li>Levi's Stadium (San Francisco Bay Area)</li>
+          <li>SoFi Stadium (Los Angeles)</li>
+          <li>Estadio Akron (Guadalajara)</li>
+          <li>Estadio Azteca (Mexico City)</li>
+          <li>Estadio BBVA (Monterrey)</li>
+          <li>NRG Stadium (Houston)</li>
+          <li>AT&amp;T Stadium (Dallas)</li>
+          <li>Arrowhead Stadium (Kansas City)</li>
+          <li>Mercedes-Benz Stadium (Atlanta)</li>
+          <li>Hard Rock Stadium (Miami)</li>
+          <li>Lincoln Financial Field (Philadelphia)</li>
+          <li>MetLife Stadium (New York/New Jersey)</li>
+          <li>BMO Field (Toronto)</li>
+          <li>Gillette Stadium (Boston)</li>
+        </ol>
+        <img src="images/us_stadiums.png" class="stadiums-image">
+      </div>
+      <div class="section-body">
+        <p class="para">Yet instead of the usual vigor that comes with a World Cup summer, this year there is an air of uncertaintly. One obvious reason is the unstable political climate of the United States, but another is the lackluster public transportation infrastructure. Most non-Americans are used to taking public transit to and from football matches. In the US however, this is far from ordinary. Lacking the infrastructure needed to move a large number of people between cities and stadiums, most people opt and prefer to drive.</p>
+        <p class="para">This fact has many Europeans wondering how they are going to get to the World Cup stadiums. In order to illuminate this issue, we are going to compare the public transportation access of the 16 World Cup Stadiums to that of 16 European stadiums. These stadiums were chosen based on relevance and geographic diversity. The locations of these stadiums are shown below.</p>
+      </div>
+      <div class="stadiums-container">
+        <img src="images/europe_stadiums.png" class="stadiums-image">
+        <ol class="stadiums-list">
+          <li>Estádio da Luz (Lisbon)</li>
+          <li>Santiago Bernabéu (Madrid)</li>
+          <li>Camp Nou (Barcelona)</li>
+          <li>Stade Vélodrome (Marseille)</li>
+          <li>Stade de France (Paris)</li>
+          <li>Wembley Stadium (London)</li>
+          <li>Anfield (Liverpool)</li>
+          <li>Johan Cruyff Arena (Amsterdam)</li>
+          <li>Westfalenstadion (Dortmund)</li>
+          <li>Allianz Arena (Munich)</li>
+          <li>San Siro (Milan)</li>
+          <li>Stadio Olimpico (Rome)</li>
+          <li>Puskás Aréna (Budapest)</li>
+          <li>PGE Narodowy (Warsaw)</li>
+          <li>Ali Sami Yen (Istanbul)</li>
+          <li>Luzhniki Stadium (Moscow))</li>
+        </ol>
+      </div>
+    </section>
+	
+      <section class="scrolly" id="french">
+        <div class="section-header">
+          <h2>II. OLIVIER</h2>
+        </div>
+        <div class="section-body">
+          <p class="para">Olivier Pons is a lifelong Marseille FC supporter, and is also planning on visiting America to support the French national team in their group stage game against Senegal this summer. Although excited for the match, he is a little concered about the accessibility of MetLife Stadium from downtown Manhattan. To better understand his concerns, let's follow him through his route to a Marseille FC home game.</p>
+        </div>
+        <div class="scrolly-container">
+        <div class="sticky-thing">
+          <div class="zoomBox" id="zoomBox1">
+<!-- Sticky Thing 1 goes below this line -->
+            <img id="scrollyPhoto1" class="photoDiv" src="images/marseille0.png">
+            <div class="photo-overlay" id="overlay1"></div>
+<!-- Sticky Thing 1 goes above this line -->
+          </div>
+        </div>
+
+        <div class="scrolly-overlay" id="scrolly1">
+          <div class="step" id="stepm1">
+            <p>Olivier travels from his home to Orange Velodrome for every Marseille FC home game.</p>
+          </div>
+          <div class="step" id="stepm2">
+            <p>He first walks 10 minutes from his apartment to Notre-Dame du Mont station.</p>
+          </div>
+          <div class="step" id="stepm3">
+            <p>He then takes the M2 towards Sainte-Marguerite Dromel for 3 stops.</p>
+          </div>
+          <div class="step" id="stepm4">
+            <p>He exists at Rond-Point du Prado station and walks 6 minutes to Orange Velodrome.</p>
+          </div>
+          <div class="step" id="stepm5" style="opacity: 0">&nbsp;</div>
+          <div class="step" id="stepm6">
+            <p>In a couple months, Olivier will fly over to New York City for the World Cup.</p>
+          </div>
+          <div class="step" id="stepm7" style="opacity: 0">&nbsp;</div>
+          <div class="step" id="stepm8">
+            <p>Here, he will ned to travel from his hotel in downtown Manhattan to the France vs Senegal game.</p>
+          </div>
+          <div class="step" id="stepm9">
+            <p>He begins by walking 3 minutes from his hotel to the 33 St station.</p>
+          </div>
+          <div class="step" id="stepm10">
+            <p>From there, he takes the 6 train uptown towards Pelham Bay Park for 1 stop.</p>
+          </div>
+          <div class="step" id="stepm11">
+            <p>He then transfers to the 7 train, and takes 2 stops towards 34 St-Hudson Yards.</p>
+          </div>
+          <div class="step" id="stepm12">
+            <p>He exits at Times Sq-42 St, and walks to the Port Authority Bus Terminal.</p>
+          </div>
+          <div class="step" id="stepm13">
+            <p>There, he waits for the next 160 Bus and rides 6 stops until he reaches Stadium Lot G-17.</p>
+          </div>
+          <div class="step" id="stepm14">
+            <p>Finally, he walks through the parking lot and enters MetLife Stadium.</p>
+          </div>
+          <div class="step" id="stepm15" style="opacity: 0">&nbsp;</div>
+          <div class="step" id="stepm16" style="opacity: 0; margin-bottom: 0;">&nbsp;</div>
+        </div>
+        </div>
+        <div class="section-body">
+          <p class="para">Olivier's journey to Marseille FC's stadium only takes 20 minutes from downtown Marseille, while getting to MetLife from Manhattan takes around 1 hour. This discrepancy is what makes certain World Cup visitors, who are often used to fast, efficient, public transportation systems, quite uncertain about the overall travel logisitcs.</p>
+          <p class="para">However, this isn't to say that all of the World Cup stadiums are poorly connected. Some of them are actually much easier to get to than many European stadiums.</p>
+        </div>
+      </section>
+
+      <section class="scrolly" id="spanish">
+        <div class="section-header">
+          <h2>III. LAIA</h2>
+        </div>
+        <div class="section-body">
+          <p class="para">Laia Font is a lifelong FC Barcelona supporter, and is also planning on visiting America to support the Spanish national team in their group stage game against Cape Verde this summer. Despite other's concerns about getting the the World Cup stadiums, she has realized that getting to Mercedes-Benz Arena from downtown Atlanta is actually a must faster journey than hers to any FC Barcelona home game at the Spotify Camp Nou. To better understand her perspective, let's follow her through her route to an FC Barcelona home game.</p>
+        </div>
+        <div class="scrolly-container">
+        <div class="sticky-thing">
+          <div class="zoomBox" id="zoomBox2">
+<!-- Sticky Thing 1 goes below this line -->
+            <img id="scrollyPhoto2" class="photoDiv" src="images/barca0.png">
+            <div class="photo-overlay" id="overlay2"></div>
+<!-- Sticky Thing 1 goes above this line -->
+          </div>
+        </div>
+
+        <div class="scrolly-overlay" id="scrolly2">
+          <div class="step" id="stepb1">
+            <p>Laia travels from her home to the Spotify Camp Nou for every Barcelona home game.</p>
+          </div>
+          <div class="step" id="stepb2">
+            <p>First, she walks just a couple of minutes to Poblenou station.</p>
+          </div>
+          <div class="step" id="stepb3">
+            <p>She then takes the L4 line towards Trinitat Nova for 7 stops.</p>
+          </div>
+          <div class="step" id="stepb4">
+            <p>She transfers at Passieg de Gracia to the L3 line. From there, she takes it towards Zona Universitaria for 12 stops.</p>
+          </div>
+          <div class="step" id="stepb5">
+            <p>She exits at Palau Reial station and walks 7 minutes to Spotify Camp Nou.</p>
+          </div>
+          <div class="step" id="stepb6" style="opacity: 0">&nbsp;</div>
+          <div class="step" id="stepb7">
+            <p>In a couple of months, she will travel to Atlanta for the World Cup.</p>
+          </div>
+          <div class="step" id="stepb8" style="opacity: 0">&nbsp;</div>
+          <div class="step" id="stepb9">
+            <p>Here she will need to travel from her hotel in downtown Atlanta to the Mercedes-Benz Stadium.</p>
+          </div>
+          <div class="step" id="stepb10">
+            <p>She begins by walking a couple of minutes to a park, where she pauses to look at the Olympic Rings from the 1996 Summer Olympics.</p>
+          </div>
+          <div class="step" id="stepb11">
+            <p>She then continues her journey walking to the stadium.</p>
+          </div>
+          <div class="step" id="stepb12" style="opacity: 0">&nbsp;</div>
+          <div class="step" id="stepb13" style="opacity: 0; margin-bottom: 0;">&nbsp;</div>
+        </div>
+        </div>
+        <div class="section-body">
+          <p class="para">Laia's journey to FC Barcelona's stadium takes over 40 minutes, while getting to Mercedes-Benz Arena from downtown Atlanta is just a 20 minute walk. Laia was quite pleased at this situation, but she is still aware that this level of connectivity is a rare case within the United States.</p>
+          <p class="para">Moreover, connectivity is not just getting from downtown to the stadiums, but especially for those living in these cities, one should be able to get to the stadium fairly easily from anywhere in the city.</p>
+        </div>
+      </section>
+
+      <section class="scrolly" id="connectivity">
+        <div class="section-header">
+          <h2>IV. CONNECTIVITY</h2>
+        </div>
+        <div class="section-body">
+          <p class="para">The connectivity of a place often requires 2 factors: how many people can get there and how quickly can they do it. This is especially important for stadiums, since they often host large events with rushes of people going to and from the stadium at the same time. Poor connectivity of a stadium can lead to slow travel times to and from the stadium, but can also impact other travelers in the area going to other destinations.</p>
+        </div>
+        <div class="scrolly-container">
+        <div class="sticky-thing">
+          <div class="zoomBox" id="zoomBox3">
+<!-- Sticky Thing 1 goes below this line -->
+            <div id="scrollyPhoto3" class="photoDiv photoGrid">
+              <div class="photoCol">
+                <img id="mars" src="images/marsr0.png">
+                <img id="nyc" src="images/nycr0.png">
+              </div>
+              <div class="photoCol">
+                <img id="bar" src="images/barr0.png">
+                <img id="atl" src="images/atlr0.png">
+              </div>
+            </div>
+<!-- Sticky Thing 1 goes above this line -->
+          </div>
+        </div>
+
+        <div class="scrolly-overlay" id="scrolly3">
+          <div class="step" id="stepr1">
+            <p>Here are the locations of the stadiums in each city.</p>
+          </div>
+          <div class="step" id="stepr2">
+            <p>This is the region of people who can get to each stadium using public transportation within 30 minutes</p>
+          </div>
+          <div class="step" id="stepr3">
+            <p>...within 60 minutes</p>
+          </div>
+          <div class="step" id="stepr4">
+            <p>...within 90 minutes.</p>
+          </div>
+          <div class="step" id="stepr5" style="opacity: 0">&nbsp;</div>
+          <div class="step" id="stepd6" style="opacity: 0; margin-bottom: 0;">&nbsp;</div>
+        </div>
+        </div>
+        <div class="section-body">
+          <p class="para">While these regions may all look somewhat comparable in size, they do not match in population. For example, Manhattan is not covered until we get to 90 minutes, while downtown Marseille and Barcelona are mostly covered by the 30 minute region. As a result, at 30 minutes, around 100,000 people can get to Orange Velodrome in Marseille, but only 3,000 can get to MetLife Stadium. However, at 90 minutes, those numbers become 977,000 and 4,226,000 respectively. This is still not completely representative however, since 977,000 is around 50% of Marseille's total metro population, while 4,226,000 is only around 18% of New York's metro population.</p>
+          <p class="para">Atlanta's population numbers are also quite interesting. While Mercedes-Benz Stadium is in the center of the city, only 40,000 people can get there within 30 minutes. Even at 90 minutes, that number only becomes 982,000, which is around the same as it is for Marseille, but Atlanta has a metro population over 3 times the size. This is due to widespread suburban sprawl, which is a feature of many American cities.</p>
+          <p class="para">Ultimately, it has been well known that American cities cannot compete with European ones when it comes to public transportation and overall connectivity. The Unites States is a much more car-dependent nation, and opts to build large sprawling cities instead of compact ones. Yet, America has also never hosted an event as large and widespread as this year's World Cup. It is still unclear whether America's transportation problems will be an issue the summer, and whether it will become a lesson on human movement and connectivity that future generations can learn from.</p>
+        </div>
+      </section>
+
+      <div id="footer">
+        <div>
+          <p style="margin-left: 20px">CSTC 2310 Telling Stories With Maps</p>
+          <p style="margin-right: 20px">Vincent Zhu</p>
+        </div>
+      </div>
+
+    <!-- Mobile Warning Modal -->
+    <div id="deviceModal" class="modal">
+      <div class="modal-content">
+        <span>
+          Wow! One of your friends must be in Aaron Reiss's "Telling Stories With Maps" class — how cool! <br><br> Sadly, this site is meant to be viewed on a computer, so if you are on a phone or tablet then it's gonna look all kinds of wonky and you might get the wrong impression about how amazing this work is.
+        </span>
+        <button id="continueBtn">Continue Anyway</button>
+      </div>
+    </div>
+
+  <script src="script.js"></script>
+
+  </body>
+</html>
