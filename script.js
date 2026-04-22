@@ -362,6 +362,18 @@ d3.select("#stepr2").on('stepout',function(e) {
   }
 })
 
+d3.select("#stepr2_1").on('stepin',function(e) {
+  if (e.detail.direction === 'down') {
+    d3.select("#nyc").attr("src", "images/nycr2_1.png");
+  }
+})
+
+d3.select("#stepr2_1").on('stepout',function(e) {
+  if (e.detail.direction === 'up') {
+    d3.select("#nyc").attr("src", "images/nycr2.png");
+  }
+})
+
 d3.select("#stepr3").on('stepin',function(e) {
   if (e.detail.direction === 'down') {
     d3.select("#mars").attr("src", "images/marsr3.png");
@@ -374,9 +386,37 @@ d3.select("#stepr3").on('stepin',function(e) {
 d3.select("#stepr3").on('stepout',function(e) {
   if (e.detail.direction === 'up') {
     d3.select("#mars").attr("src", "images/marsr2.png");
-    d3.select("#nyc").attr("src", "images/nycr2.png");
+    d3.select("#nyc").attr("src", "images/nycr2_1.png");
     d3.select("#bar").attr("src", "images/barr2.png");
     d3.select("#atl").attr("src", "images/atlr2.png");
+  }
+})
+
+d3.select("#stepr3_1").on('stepin',function(e) {
+  if (e.detail.direction === 'down') {
+    d3.select("#mars").attr("src", "images/marsr3_1.png");
+    d3.select("#bar").attr("src", "images/barsr3_1.png");
+  }
+})
+
+d3.select("#stepr3_1").on('stepout',function(e) {
+  if (e.detail.direction === 'up') {
+    d3.select("#mars").attr("src", "images/marsr3.png");
+    d3.select("#bar").attr("src", "images/barr3.png");
+  }
+})
+
+d3.select("#stepr3_2").on('stepin',function(e) {
+  if (e.detail.direction === 'down') {
+    d3.select("#atl").attr("src", "images/atlr3_1.png");
+    d3.select("#nyc").attr("src", "images/nycr3_1.png");
+  }
+})
+
+d3.select("#stepr3_2").on('stepout',function(e) {
+  if (e.detail.direction === 'up') {
+    d3.select("#atl").attr("src", "images/atlr3.png");
+    d3.select("#nyc").attr("src", "images/nycr3.png");
   }
 })
 
@@ -395,6 +435,34 @@ d3.select("#stepr4").on('stepout',function(e) {
     d3.select("#nyc").attr("src", "images/nycr3.png");
     d3.select("#bar").attr("src", "images/barr3.png");
     d3.select("#atl").attr("src", "images/atlr3.png");
+  }
+})
+
+d3.select("#stepr4_1").on('stepin',function(e) {
+  if (e.detail.direction === 'down') {
+    d3.select("#mars").attr("src", "images/marsr4_1.png");
+    d3.select("#bar").attr("src", "images/barsr4_1.png");
+  }
+})
+
+d3.select("#stepr4_1").on('stepout',function(e) {
+  if (e.detail.direction === 'up') {
+    d3.select("#mars").attr("src", "images/marsr4.png");
+    d3.select("#bar").attr("src", "images/barr4.png");
+  }
+})
+
+d3.select("#stepr4_2").on('stepin',function(e) {
+  if (e.detail.direction === 'down') {
+    d3.select("#atl").attr("src", "images/atlr4_1.png");
+    d3.select("#nyc").attr("src", "images/nycr4_1.png");
+  }
+})
+
+d3.select("#stepr4_2").on('stepout',function(e) {
+  if (e.detail.direction === 'up') {
+    d3.select("#atl").attr("src", "images/atlr4.png");
+    d3.select("#nyc").attr("src", "images/nycr4.png");
   }
 })
 
