@@ -326,6 +326,24 @@ d3.select("#stepr1").on('stepout',function(e) {
   }
 })
 
+d3.select("#stepr1_1").on('stepin',function(e) {
+  if (e.detail.direction === 'down') {
+    d3.select("#mars").attr("src", "images/marsr1_1.png");
+    d3.select("#nyc").attr("src", "images/nycr1_1.png");
+    d3.select("#bar").attr("src", "images/barr1_1.png");
+    d3.select("#atl").attr("src", "images/atlr1_1.png");
+  }
+})
+
+d3.select("#stepr1_1").on('stepout',function(e) {
+  if (e.detail.direction === 'up') {
+    d3.select("#mars").attr("src", "images/marsr1.png");
+    d3.select("#nyc").attr("src", "images/nycr1.png");
+    d3.select("#bar").attr("src", "images/barr1.png");
+    d3.select("#atl").attr("src", "images/atlr1.png");
+  }
+})
+
 d3.select("#stepr2").on('stepin',function(e) {
   if (e.detail.direction === 'down') {
     d3.select("#mars").attr("src", "images/marsr2.png");
@@ -337,10 +355,10 @@ d3.select("#stepr2").on('stepin',function(e) {
 
 d3.select("#stepr2").on('stepout',function(e) {
   if (e.detail.direction === 'up') {
-    d3.select("#mars").attr("src", "images/marsr1.png");
-    d3.select("#nyc").attr("src", "images/nycr1.png");
-    d3.select("#bar").attr("src", "images/barr1.png");
-    d3.select("#atl").attr("src", "images/atlr1.png");
+    d3.select("#mars").attr("src", "images/marsr1_1.png");
+    d3.select("#nyc").attr("src", "images/nycr1_1.png");
+    d3.select("#bar").attr("src", "images/barr1_1.png");
+    d3.select("#atl").attr("src", "images/atlr1_1.png");
   }
 })
 
